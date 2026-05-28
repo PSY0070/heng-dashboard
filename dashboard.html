@@ -414,4 +414,14 @@ function openModal(idx) {
   document.body.style.overflow = 'hidden';
 }
 function closeModal(e) { if(e.target===document.getElementById('modal-overlay')) closeModalDirect(); }
-function closeMo
+function closeModalDirect() {
+  document.getElementById('modal-overlay').classList.remove('show');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModalDirect(); });
+
+buildFilters();
+render();
+</script>
+</body>
+</html>
